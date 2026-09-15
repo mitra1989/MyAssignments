@@ -59,5 +59,16 @@ test('create lead with css selector', async ({ page }, testInfo) => {
 
   // Click on Create Lead button
   await page.locator('table [value="Create Lead"]').click()
+
+  // Check if Lead has been created successfully
+  let firstName = await page.locator('table [id="viewLead_firstName_sp"]').innerText()
+  
+  // firstName should be 'Shirsendu'
+  if (firstName === 'Shirsendu') {
+    console.log('Lead created successfully!')
+    console.log('First Name: ' + firstName)
+  } else {
+    console.error('Failed to create lead.')
+  }
   
 });
