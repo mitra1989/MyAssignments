@@ -18,4 +18,6 @@ test('has title', async ({ page }, testInfo) => {
 
    //Click login button with locator [id="Login"]
   await page.locator('[type="submit"]').click()
+
+  await page.pause();
 });

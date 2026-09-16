@@ -40,7 +40,7 @@ export default defineConfig({
         name: 'chromium',
         use: { 
           browserName:"chromium", 
-          viewport:null, // disable the deafult 1280x720
+          viewport: { width: 1280, height: 720 },
           launchOptions:{
             args:['--start-maximized'],
             
